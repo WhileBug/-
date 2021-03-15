@@ -1,0 +1,207 @@
+<!doctype html>
+<html>
+<head>
+<script src="../vue.min.js"></script>
+<script src="../jquery-2.1.1.min.js"></script>      
+<script type="text/javascript" src="../js/three.min.js"></script>
+<link rel="stylesheet" type="text/css" href="../all.css">       
+<title>recipe</title>
+</head>
+<body>
+
+<div class="wrap"  id="app">
+<div class="w clear">
+ <div class="mo mt20">                
+<h1>{{rows[0].name}}</h1>
+</div>
+
+</div>
+<div class="recipe_De_imgBox" id="recipe_De_imgBox">
+<a class="J_photo" title="鱼香肉丝的做法"><span></span><img src="0.jpg" weight="400" height="500" alt="鱼香肉丝的做法"> </a>
+
+</div>
+<blockquote class="block_txt" id="block_txt">
+<div id="block_txt1" ><span class="txt_tart">“</span>{{rows[0].introduce}}<span class="txt_end">” </span>
+</div>
+</blockquote>
+<div class="mo mt20">
+<br>
+<h2>食材明细</h2>
+<br>
+</div>
+<fieldset class="particulars">
+<legend>主料</legend>
+<div class="recipeCategory_sub_R clear">
+<ul>
+<li>
+<span class="category_s1">
+<b>冬笋</b>
+</span>
+<span class="category_s2">200克</span>
+</li>
+<li>
+<span class="category_s1">
+<b>猪里脊肉</b>
+</span>
+<span class="category_s2">300克</span>
+</li>
+<li>
+<span class="category_s1">
+<b>水发木耳</b>
+</span>
+<span class="category_s2">60克</span>
+</li>
+<li>
+<span class="category_s1">
+<b>胡萝卜</b>
+</span>
+<span class="category_s2">60克</span>
+</li>
+</ul>
+</div>
+</fieldset>
+<fieldset class="particulars">
+<legend>辅料</legend>
+<div class="recipeCategory_sub_R clear">
+<ul>
+<li>
+<span class="category_s1">
+<b>蒜</b>
+</span>
+<span class="category_s2">适量</span>
+</li>
+<li>
+<span class="category_s1">
+<b>剁辣椒</b>
+</span>
+<span class="category_s2">适量</span>
+</li>
+</ul>
+</div>
+</fieldset>
+<fieldset class="particulars">
+ <div class="recipeCategory_sub_R clear">
+<ul>
+<li>
+<span class="category_s1">
+<a >鱼香</a>
+</span>
+<span class="category_s2">口味</span>
+</li>
+<li>
+<span class="category_s1">
+<a  >炒</a>
+</span>
+<span class="category_s2">工艺</span>
+</li>
+<li>
+<span class="category_s1">
+<a  >廿分钟</a>
+</span>
+<span class="category_s2">耗时</span>
+</li>
+<li>
+<span class="category_s1">
+<a >简单</a>
+</span>
+<span class="category_s2">难度</span>
+</li>
+</ul>
+</div>
+</fieldset>
+<div class="mo mt20">
+<h2>{{rows[0].name}}的做法步骤</h2>
+</div>
+<div class="recipeStep">
+<ul>
+<li>
+<div class="recipeStep_img">
+<img src="1.jpg" alt="鱼香肉丝的做法步骤：1">
+</div>
+<div class="recipeStep_word"><div class="recipeStep_num">1</div id="app">{{rows[0].step1}}</div>
+</li>
+<li>
+<div class="recipeStep_img">
+<img src="2.jpg" alt="鱼香肉丝的做法步骤：2">
+</div>
+<div class="recipeStep_word"><div class="recipeStep_num">2</div>{{rows[0].step2}}</div>
+</li>
+<li>
+<div class="recipeStep_img">
+<img src="3.jpg" alt="鱼香肉丝的做法步骤：3">
+</div>
+<div class="recipeStep_word"><div class="recipeStep_num">3</div>{{rows[0].step3}}</div>
+</li>
+<li>
+<div class="recipeStep_img">
+<img src="4.jpg" alt="鱼香肉丝的做法步骤：3">
+</div>
+<div class="recipeStep_word"><div class="recipeStep_num">4</div>{{rows[0].step4}}</div>
+</li>
+<li>
+<div class="recipeStep_img">
+<img src="5.jpg" alt="鱼香肉丝的做法步骤：3">
+</div>
+<div class="recipeStep_word"><div class="recipeStep_num">5</div>{{rows[0].step5}}</div>
+</li>
+<li>
+<div class="recipeStep_img">
+<img src="6.jpg" alt="鱼香肉丝的做法步骤：3">
+</div>
+<div class="recipeStep_word"><div class="recipeStep_num">6</div>{{rows[0].step6}}</div>
+</li>
+<li>
+<div class="recipeStep_img">
+<img src="7.jpg" alt="鱼香肉丝的做法步骤：3">
+</div>
+<div class="recipeStep_word"><div class="recipeStep_num">7</div>{{rows[0].step7}}</div>
+</li>
+<li>
+<div class="recipeStep_img">
+<img src="8.jpg" alt="鱼香肉丝的做法步骤：3">
+</div>
+<div class="recipeStep_word"><div class="recipeStep_num">8</div>{{rows[0].step8}}</div>
+</li>
+
+</ul>
+</div>
+<div class="mo">
+<br>
+<h2>小窍门</h2>
+<br>
+</div>
+<div class="recipeTip">
+１、选择用里脊肉的原因是里脊肉比较辣。在切肉前可先放到冰箱冷冻一会，这样更容易切一些。
+<br><br>
+2、辣椒的量可根据自己的口味适当增加减少。
+<br><br>
+3、豆瓣酱有盐味。所以放盐一定要小心。
+<br><br>
+</div>
+<br>
+
+<script language="JavaScript" src="../all.js"></script>
+ </body>
+ <script>	   
+        $.ajax({
+        type: "post",
+        url: "http://localhost//test.php",
+        data:{id:50},//提交到demo.php的数据
+        dataType: "json",//回调函数接收数据的数据格式
+        success: function(msg){
+        var v = new Vue({
+           el: '#app',
+           data: {
+           rows: msg
+           }
+        })
+           console.log(msg);
+  
+        },
+        error:function(msg){
+           $('#text').html("<span>"+"失败！..."+"</span>")
+           console.log(msg);
+        }
+        });
+      </script>
+</html>
