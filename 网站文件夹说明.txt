@@ -1,0 +1,7 @@
+﻿*******************
+*****文件说明*****
+*******************
+dataset-1/dataset-2/dataset-3分别是创建food_web数据库/USER表/John的数据
+默认localhost，用户名root，密码为password，mysql数据库
+sign.html为登陆页面
+food_map文件夹放置美食地图

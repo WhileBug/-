@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>signin</title>
+    <style type="text/css">
+        .background{
+            padding: 0;
+            width:100%;
+	         height: 100%;
+	         position: absolute;
+            background-image: url(./images/bg.png);
+	        background-size: cover;
+        }
+        .container{
+            height: 100%;
+        }
+        #c1{
+            height:20%;
+        }
+        #c2{
+            text-align: center;
+        }
+        h1{
+            color: white;
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 60px;
+            letter-spacing: 3px;
+        }
+        .SingUp {
+            width: 100%;
+            height: 500px;	
+            background-color: rgba(0,0,0,0.2);
+            padding: 15px;
+            padding-top: 30px;
+            border-radius: 10px;
+        }
+
+        .SingUp h1 {
+            color: white;
+            margin-top: 5px;
+            font-weight: bold;
+            font-size: 60px;
+            letter-spacing: 3px;
+        }
+
+        .SingUp form {
+            max-width: 420px;
+            margin: 30px auto;
+        }
+
+        .SingUp .btn {
+            border-radius: 50px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 20px;
+            padding: 14px;
+            background-color: rgb(229, 76, 42);
+            border: 0px;
+        }
+
+        .form-group input {
+            font-size: 20px;
+            font-weight: lighter;
+            border: none;
+            background-color: #F0F0F0;
+            color: rgb(229, 76, 42);
+            padding: 26px 30px;
+            border-radius: 50px;
+            transition : 0.2s;
+        }
+        #eInfo{
+            height:20px;
+            text-align: left;
+        }
+        a{
+            text-align: left;
+        }
+        p{
+            font-size: 20px;
+            font-weight: border;
+            color: rgb(229, 76, 42);
+        }
+        a:link {color:rgb(229, 76, 42); font-size: large; font-weight: bold;}		/* 未被访问的链接 */
+        a:visited {color:rgb(229, 76, 42);}	/* 已被访问的链接 */
+        a:hover {color:rgb(229, 76, 42)}	/* 鼠标指针移动到链接上 */
+        a:active {color:rgb(229, 76, 42);}	/* 正在被点击的链接 */
+</style>
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+
+<body>
+    <div class="background">
+    <div class="container">
+        <div class="row" id="c1">
+        </div>
+        <div class="row" id="c2">
+            <div class="col-xs-6 col-sm-3 col-md-3">
+            </div>
+            <div class="col-xs-16 col-sm-8 col-md-6">
+                    <div class="SingUp">
+
+                        <h1>Sing up</h1>
+                        
+                        <!-- SignUp form -->
+                        <form id="formid"  name= "myform" method = 'GET' action="signup.php"  onsubmit = "return checkUser();" >
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="user_name" name="user_name"  aria-describedby="emailHelp" placeholder="input username">
+                            
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="inputPassword" name="password" placeholder="input password">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="checkPassword" placeholder="input password again" onblur="check()">
+                            <div id="eInfo">
+                            <p id="errorInfo">两次输入密码不一致</p>
+                            </div>
+                        </div>
+    
+                        <div class="form-check" >               
+                            <a class="sign-up" href="sign.html" >Sign</a>         
+                        </div>
+                        
+                        <br>
+                        <button type="submit" class="btn btn-lg btn-block btn-success">Sign Up</button>
+                        </form>
+                    </div>
+            </div>
+            <div class="col-xs-16 col-sm-8 col-md-3">
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="bt/js/bootstrap.min.js"></script>
+    <script>
+       var pass_check;
+       $("#errorInfo").hide();
+       
+       function search(user){//查询用户是否已存在
+            return 0;
+       }
+       function checkUser(){
+            var user = document.getElementById("inputEmail").value;
+            
+            if(pass_check&&(!search(user))){        //如果用户未注册并且两次密码输入正确
+                alert("注册成功");
+            }
+       }
+       function check(){
+            var password_check= document.getElementById("checkPassword").value;
+            var password = document.getElementById("inputPassword").value;
+
+            if(password_check!=password){
+                $("#errorInfo").show();
+                pass_check=0;
+            }
+            else{
+                $("#errorInfo").hide();
+                pass_check=1;
+            }
+       }
+    </script>
+</body>
+</html>

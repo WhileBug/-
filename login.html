@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>signin</title>
+    <style type="text/css">
+        .background{
+            padding: 0;
+            width:100%;
+	         height: 100%;
+	         position: absolute;
+            background-image: url(http://127.0.0.1/food_login/images/bg.png);
+	        background-size: cover;
+        }
+        .container{
+            height: 100%;
+        }
+        #c1{
+            height:20%;
+        }
+        #c2{
+            text-align: center;
+        }
+        h1{
+            color: white;
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 60px;
+            letter-spacing: 3px;
+        }
+        .login {
+	width: 100%;
+	height: 500px;	
+	background-color: rgba(0,0,0,0.2);
+	padding: 15px;
+	padding-top: 30px;
+	border-radius: 10px;
+}
+
+.login h1 {
+	color: white;
+	margin-top: 5px;
+	font-weight: bold;
+	font-size: 60px;
+	letter-spacing: 3px;
+}
+
+.login form {
+	max-width: 420px;
+	margin: 30px auto;
+}
+
+.login .btn {
+	border-radius: 50px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	font-size: 20px;
+	padding: 14px;
+    background-color: rgb(229, 76, 42);
+    border: 0px;
+}
+
+.form-group input {
+	font-size: 20px;
+	font-weight: lighter;
+	border: none;
+	background-color: #F0F0F0;
+	color: rgb(229, 76, 42);
+	padding: 26px 30px;
+	border-radius: 50px;
+	transition : 0.2s;
+}
+
+a:link {color:rgb(229, 76, 42); font-size: large; font-weight: bold;}		/* 未被访问的链接 */
+a:visited {color:rgb(229, 76, 42);}	/* 已被访问的链接 */
+a:hover {color:rgb(229, 76, 42)}	/* 鼠标指针移动到链接上 */
+a:active {color:rgb(229, 76, 42);}	/* 正在被点击的链接 */
+/* .forgot-password {
+	text-align: right;
+	float: right;
+	font-weight: bold;
+}
+
+.forgot-password a {
+	color: rgb(229, 76, 42);
+	opacity: 0.6;
+}
+
+.forgot-password a:hover {
+	opacity: 1;
+}
+.sign-up {
+	text-align: right;
+	float: right;
+	font-weight: bold;
+}
+
+.sign-up a {
+    color: rgb(229, 76, 42);
+    font-size: x-large;
+}
+
+.sign-up a:hover {
+    color: rgb(229, 76, 42);
+    font-weight: bold;
+} */
+    </style>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="background">
+    <div class="container">
+        <div class="row" id="c1">
+        </div>
+        <div class="row" id="c2">
+            <div class="col-xs-6 col-sm-3 col-md-3">
+            </div>
+            <div class="col-xs-16 col-sm-8 col-md-6">
+                    <div class="login">
+
+                            <h1>Login</h1>
+                            
+                            <!-- Loging form -->
+                            <form id="formid"  name= "myform" method = 'GET'  action = 'login.php' onsubmit = "return checkUser();" >
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="user_name"   aria-describedby="emailHelp" placeholder="Enter username">
+                                
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" name="password" placeholder="Enter password">
+                            </div>
+        
+                                <div class="form-check">          
+                                 <a class="forgot-password" href="./signup.html">Forgot Password?</a>        
+                                 <a class="sign-up" href="./signup.html">SignUp</a> 
+        
+                            </div>
+                            
+                            <br>
+                            <button type="submit" class="btn btn-lg btn-block btn-success" >Sign in</button>
+                            </form>
+                          </div>
+            </div>
+            <div class="col-xs-16 col-sm-8 col-md-3">
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="jquery-3.4.1.js"></script>
+    <script src="bt/js/bootstrap.min.js"></script>
+    <script>
+        function checkUser(){
+            var result = document.getElementById("inputEmail").value;
+            var password = document.getElementById("inputPassword").value;
+            if(result){
+                alert("用户名不能为空");
+                return false;
+            }
+            if(password == ""  ){
+                alert("密码不能为空");
+                return false;
+            }else{
+            return true;
+            }
+}
+    </script>
+</body>
+</html>
