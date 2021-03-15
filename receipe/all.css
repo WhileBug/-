@@ -1,0 +1,91 @@
+body{background-color: #f4f4f4;}
+ li{list-style-type:none;}
+ .recipeStep li{
+     display:block;
+     margin:0 0 40px 0
+
+    }
+  .wrap{
+       width:1000px;
+        height:100px;
+        margin:0 auto;
+    }
+
+.recipeCategory_sub_R ul{
+    display:block;
+    float:left;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    }
+.recipeCategory_sub_R li{
+    float:left;
+    width:159px;
+    text-align:center;
+    height:70px;
+    position:relative;
+}
+.recipeCategory_sub_R li .category_s1{
+    display:block;
+    font-size:20px;
+    width:100%;
+    height:40px;
+    line-height:45px;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+    color:#666}
+
+.recipeCategory_sub_R li .category_s2{
+    color:#999;
+    display:block;
+    font-size:12px;
+    line-height:16px;
+    overflow:hidden;
+    text-align:center;
+    width:84%;
+    margin: 0 auto;
+}
+
+.recipeStep li .recipeStep_img{
+    width:240px;
+    display:inline-block;
+    zoom:1;
+    position:relative
+}
+.recipeStep li .recipeStep_img img{
+    width:220px;
+    background:no-repeat scroll center center #f8f8f8
+}
+.recipeStep li .recipeStep_word{
+    position:relative;
+    width:390px;
+    display:inline-block;
+    zoom:1;
+    vertical-align:middle;
+    font-size:18px;
+    margin-top:-150px;
+}
+
+.recipeStep_num{
+    border:1px solid #ddd;
+    border-radius:50%;
+    font-size:18px;
+    height:34px;
+    left:0;
+    line-height:34px;
+    position:absolute;
+    text-align:center;
+    top:-44px;
+    width:34px}
+
+.mo *{
+    color:#ff6767
+}
+.particulars{
+    border-radius:10px;
+    border:1px solid #ddd;
+    padding:0 0 10px 0;
+    margin:0 0 15px 0
+}
+
+.particulars .recipeCategory_sub_R ul{border:none}
